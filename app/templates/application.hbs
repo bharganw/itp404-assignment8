@@ -8,13 +8,6 @@
 		<button type="submit">Search</button>
 	</form>
 
-	<script>
-		let email = {
-			read: false,
-			title: 'Sign up for Spring classes!'
-		};
-	</script>
-
 	{{unread-email email=email clickAction=(action "markAsRead")}}
 
 {{outlet}}

@@ -8,6 +8,11 @@
 		{{/if}}
 	</div>
 	<div class="col-xs-10 col-sm-11">
-		<p>{{this.title}}</p>
+		{{#if this.read}}
+			<p>{{this.title}}</p>
+		{{else}}
+			<p><strong>{{this.title}}</strong></p>
+		{{/if}}
+		
 	</div>
 </div>

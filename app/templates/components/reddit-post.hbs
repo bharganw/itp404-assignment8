@@ -1,0 +1,52 @@
+<div class="_bt1 _pts">
+	<div class="row">
+		<div class="col-md-1">
+			<p><strong>Score: </strong>{{post.data.score}}</p>			
+			
+			{{vote-controle score=post.data.score onvote=(action "changeScore")}}
+		</div>
+		<div class="col-md-1">
+			<div class="row">
+				<div class="thumbnail">
+					{{#if post.data.thumbnail}}
+						<img src={{post.data.thumbnail}}>
+					{{else}}
+						<img src="http://www.logimine.com/wp-content/themes/linstar/assets/images/default.jpg">
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="row">
+				<div class="col-md-8">
+					<h3>{{post.data.title}}</h3>
+				</div>
+				<div class="col-md-2">
+					<p><strong>Ups: </strong>{{post.data.ups}}</p>
+				</div>
+				<div class="col-md-2">
+					<p><strong>Downs: </strong>{{post.data.downs}}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<p><strong>Domain: </strong><em>{{post.data.domain}}</em></p>
+				</div>
+				<div class="col-md-4">
+					{{#if post.data.num_comments}}
+						<p><strong>Num Comments: </strong>{{post.data.num_comments}}</p>
+					{{else}}
+						 <p>No comments.</p>
+					{{/if}}
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					{{relative-time post}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{yield}}

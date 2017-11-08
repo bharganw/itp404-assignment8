@@ -1,0 +1,21 @@
+<div class="margin">
+	<h1> Sub-Reddit Search</h1>
+
+	{{!-- <span>{{keywords}}</span> --}}
+
+	<form onsubmit={{action "searchForSubreddits"}}>
+		{{input typ="text" value=keywords}}
+		<button type="submit">Search</button>
+	</form>
+
+	<script>
+		let email = {
+			read: false,
+			title: 'Sign up for Spring classes!'
+		};
+	</script>
+
+	{{unread-email email=email clickAction=(action "markAsRead")}}
+
+{{outlet}}
+</div>
